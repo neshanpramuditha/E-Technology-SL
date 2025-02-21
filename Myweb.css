@@ -1,0 +1,99 @@
+h4{color: rgb(255, 255, 255);
+    text-shadow: cm;
+    padding-top:5px;
+    text-align: center;
+    text-size-adjust: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+h2{color: black;
+    background-color: rgb(18, 189, 109);
+    padding: 2px;
+    border: 3px;
+    border-radius:2cm;
+    border-style: none;
+    text-align: center;
+    text-size-adjust: auto;
+    }
+li{padding:10px;
+    text-size-adjust: auto;} 
+
+img{align-self: start;
+padding: 2px;
+align-items: center;}
+
+hr{ color:black;
+    border-width: 0.5px;
+    
+}
+
+footer{text-align: left;
+background-color: yellow;}
+
+body{margin: 0px;
+    padding: 0px;
+    
+
+}
+
+.serchbox{position: absolute;
+   
+    transform: -50%,-50%;
+    background:rgb(18, 189, 109);
+    height:20px;
+    border-radius: 40px;
+    padding:15px;
+    text-align: center;
+}
+
+.serch-btn{
+    color: black;
+    float: right;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(18, 189, 109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.serchtxt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0px;
+    color: white;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 20px;
+    width: 0px;
+    
+}
+.serchbox:hover >.serch-btn{background: white;}
+.serchbox:hover >.serchtxt{background: none;
+width:240px;
+padding:6px;}
+
+ul{ color: black;
+background-color:rgba(171, 179, 173, 0.775);
+background-position: 50%;}
+
+ol{ color: black;
+    background-color:rgba(171, 179, 173, 0.775);
+    background-position: 50%;}
+
+    dl { color: black;
+        background-color:rgba(171, 179, 173, 0.775);
+        background-position: 50%;}
+    
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100&display=swap'); 
+        body{font-family: 'Noto Sans Sinhala', sans-serif;}
+        <script src="https://kit.fontawesome.com/61c86d95c6.js" crossorigin="anonymous"></script>
+        
+
+
+

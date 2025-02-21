@@ -1,0 +1,40 @@
+h1{text-align: center;
+   background-color: #0b8a5b;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serifS;
+   text-transform: uppercase;
+   color:white;
+   font-weight: lighter;
+
+  
+
+}
+
+ul{list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #666;
+
+
+}
+li{float:left}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 13px 15px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){background-color: #112;}
+
+.active{
+    background-color: #03AA6D;
+}
+
+body{background-image:url('pexels.jpg');
+background-size:cover;
+background-attachment:fixed;}
+
+p{color: aliceblue;}
