@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;600&family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  background-color: #0a1628;
+  font-family: 'DM Sans', 'Noto Sans Sinhala', sans-serif;
+  color: #e8f4f0;
+  text-align: left;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(10, 22, 40, 0.6), rgba(10, 22, 40, 0.75)),
+    url('Bg-image.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  transform: scale(1.05);
+  z-index: -1;
+}
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(3, 170, 109, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 56px;
+}
+
+.nav-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(3, 170, 109, 0.15);
+  border: 1px solid rgba(3, 170, 109, 0.4);
+  border-radius: 10px;
+  color: #03AA6D;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background .2s, transform .15s;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+.nav-home:hover { background: rgba(3, 170, 109, 0.28); transform: scale(1.05); }
+
+.nav-links { display: flex; gap: 4px; justify-content: flex-start; }
+
+.nav-link {
+  padding: 7px 18px;
+  border-radius: 8px;
+  color: rgba(232, 244, 240, 0.7);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  transition: color .2s, background .2s;
+}
+.nav-link:hover { color: #fff; background: rgba(255, 255, 255, 0.07); }
+.nav-link.active { color: #03AA6D; background: rgba(3, 170, 109, 0.12); }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  padding: 3rem 2rem 1.5rem;
+}
+
+.page-badge {
+  display: inline-block;
+  padding: 5px 16px;
+  border: 1px solid rgba(3, 170, 109, 0.4);
+  border-radius: 50px;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #03AA6D;
+  margin-bottom: 1rem;
+  background: rgba(3, 170, 109, 0.07);
+}
+
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: .4rem;
+}
+.page-header h1 span { color: #03AA6D; }
+
+.page-header p {
+  font-size: 14px;
+  color: rgba(232, 244, 240, 0.5);
+}
+
+.page-divider {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03AA6D, transparent);
+  margin: 1rem 2rem 0;
+}
+
+/* ── SEARCH BOX ── */
+.serchbox {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(3, 170, 109, 0.12);
+  border: 1px solid rgba(3, 170, 109, 0.3);
+  height: 42px;
+  border-radius: 40px;
+  padding: 0 16px;
+  margin: 1.5rem 2rem;
+  transition: border-color .3s;
+}
+.serchbox:hover { border-color: rgba(3, 170, 109, 0.6); }
+
+.serchtxt {
+  border: none;
+  background: none;
+  outline: none;
+  color: #e8f4f0;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  width: 0;
+  transition: width .4s;
+  padding: 0;
+}
+.serchbox:hover .serchtxt { width: 200px; padding: 0 8px; }
+
+.serch-btn {
+  color: #03AA6D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* ── CONTENT WRAPPER ── */
+.content-wrapper {
+  padding: 0 2rem 2rem;
+  max-width: 960px;
+}
+
+/* ── SECTION HEADINGS (h2) ── */
+h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #03AA6D;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 14px;
+  margin: 2rem 0 .75rem;
+  border-left: 3px solid #03AA6D;
+  background: rgba(3, 170, 109, 0.07);
+  border-radius: 0 8px 8px 0;
+  text-align: left;
+}
+
+/* ── LISTS ── */
+ul, ol, dl {
+  color: #e8f4f0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 0.75rem 1rem 0.75rem 2rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  padding: 5px 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: rgba(232, 244, 240, 0.8);
+}
+
+dl {
+  padding: 0.75rem 1rem;
+}
+
+dt, dl > *:first-child {
+  font-weight: 500;
+  color: rgba(232, 244, 240, 0.9);
+  font-size: 13.5px;
+}
+
+dd {
+  margin-left: 1rem;
+  padding: 3px 0;
+}
+
+/* ── LINKS ── */
+a {
+  color: #03AA6D;
+  text-decoration: none;
+  transition: color .2s, opacity .2s;
+}
+a:hover { color: #05d48a; opacity: .9; }
+
+/* ── H4 PAGE TITLE (legacy) ── */
+h4 {
+  font-family: 'DM Sans', sans-serif;
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 1.5rem 2rem .5rem;
+  color: rgba(232, 244, 240, 0.6);
+}
+
+/* ── BOLD inside lists ── */
+b {
+  color: rgba(232, 244, 240, 0.95);
+  font-weight: 500;
+}
+
+/* ── HOME BUTTON (img link) ── */
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 1.5rem 2rem;
+  padding: 8px 18px;
+  background: rgba(3, 170, 109, 0.12);
+  border: 1px solid rgba(3, 170, 109, 0.3);
+  border-radius: 10px;
+  color: #03AA6D;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background .2s;
+}
+.home-btn:hover { background: rgba(3, 170, 109, 0.22); color: #03AA6D; }
+.home-btn img { width: 18px; height: 18px; }
+
+/* ── FOOTER ── */
+footer {
+  text-align: left;
+  padding: 1.25rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  color: rgba(232, 244, 240, 0.3);
+  background: transparent;
+  margin-top: 2rem;
+}
+
+/* ── HR ── */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin: 1rem 0;
+}
+
+/* ── TABLE (used in content pages) ── */
+table { width: 100%; border-collapse: collapse; }
+td { vertical-align: top; padding: 0; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-header  { animation: fadeUp .5s ease both; }
+.page-divider { animation: fadeUp .4s .15s ease both; }
+.content-wrapper { animation: fadeUp .5s .2s ease both; }
